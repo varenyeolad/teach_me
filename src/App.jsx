@@ -1,21 +1,12 @@
 import './App.css'
-import { useEffect } from 'react';
-import LearningPage from './pages/LearningPage/LearningPage';
-import originalScale from 'forced-original-scale';
+import { Outlet } from "react-router-dom";
 
 
-function App() {
-
-  useEffect(() => {
-    originalScale('App')
-  }, [])
-  
+function App() {  
   
   return (
     <>
-    <div id='App' style={{minWidth: '1920px'}}>
-    <LearningPage/>
-    </div>
+      <Outlet/>
     </>
   )
 }

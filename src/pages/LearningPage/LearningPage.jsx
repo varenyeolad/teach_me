@@ -32,7 +32,7 @@ function loadingSpinner() {
             margin: '0 auto'
         }}>
 
-        <Box sx={{marginTop: '114px'}}>
+        <Box sx={{paddingTop: '214px'}}>
             <Player/>
         </Box>
 

@@ -3,11 +3,11 @@ async function getQuestions(topic) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
-        "Authorization": "Bearer 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",
+        "Authorization": "Bearer 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",
       },
       body: JSON.stringify({
           "model": "gpt-3.5-turbo",
-          "messages": [{"role": "user", "content": `Write to me about ${topic} using headlines and number and a dot. Write exactly 5 subtopics. Write more than 500 words.Subtopics must always end with ':::'. For example:
+          "messages": [{"role": "user", "content": `Write to me about ${topic} using headlines and number and a dot. Write exactly 5 subtopics. Each subtopic must contain at least 200 words. Do not repeat. Subtopics must always end with ':::'. For example:
 
           1. Anatomy of white sharks:::
           They have powerful fins. They swim fast
@@ -22,7 +22,7 @@ async function getQuestions(topic) {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json;charset=utf-8',
-          "Authorization": "Bearer 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",
+          "Authorization": "Bearer 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",
         },
         body: JSON.stringify({
             "model": "gpt-3.5-turbo",

@@ -3,13 +3,18 @@ import { fetchDataByTopic } from '../../store/slices/getData'
 import { useDispatch } from 'react-redux'
 import { Box } from '@mui/material'
 import SearchIcon from '@mui/icons-material/Search';
+import {
+    useNavigate
+  } from "react-router-dom";
 
 export default function SearchForm() {
     const [value, setValue] = useState('')
     const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     function hadleSubmit(event) {
         event.preventDefault()
+        navigate('/study')
         dispatch(fetchDataByTopic(value))
     }
 
@@ -19,8 +24,12 @@ export default function SearchForm() {
 
   return (
     <Box sx={{
-        width: '1014px',
-        height: '75px'
+        width: '504px',
+        height: '75px',
+        position: 'absolute',
+        top: '52px',
+        left: '930px',
+        zIndex: '99'
     }}>
         <form onSubmit={() => {hadleSubmit(event)}} style={{
             display: 'flex',
@@ -35,8 +44,8 @@ export default function SearchForm() {
                 width: '100%',
                 height: '70px',
                 paddingLeft: '55px',
-                border: 'none',
                 borderRadius: '20.741px',
+                border: '1px solid black',
             }} placeholder='Topic title or keyword'></input>
         </form>
     </Box>
